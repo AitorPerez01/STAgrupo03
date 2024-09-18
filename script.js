@@ -2,7 +2,7 @@ function mostrarAlerta(){
     alert("Pues no era tan inutil...");
 }
 
-const apiUrl = 'http://www.omdbapi.com/';
+const apiUrl = 'https://www.omdbapi.com/';
 const apiKey = '3b0045db'; // Coloca aquí tu clave API
 
 // Seleccionamos el formulario y el div donde mostraremos los detalles
@@ -13,7 +13,7 @@ const movieDetails = document.getElementById('muestrario');
 async function fetchMovie(title) {
     try {
         // Construimos la URL de la solicitud
-        const url = `${apiUrl}?apikey=${apiKey}&t=${encodeURIComponent(title)}`;
+        const url = `${apiUrl}?t=${encodeURIComponent(title)}&apikey=${apiKey}`;
 
         // Esperamos a que se haga la solicitud y obtener la respuesta
         const response = await fetch(url);
@@ -46,7 +46,7 @@ async function fetchMovie(title) {
 // Evento al enviar el formulario
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // Evitamos que se recargue la página
-    
+
     // Obtenemos el título de la película ingresado
     const movieTitle = document.getElementById('inTitulo').value;
 
