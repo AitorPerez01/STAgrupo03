@@ -1,5 +1,8 @@
 body{
     background-color: bisque;
-    
     align-items: center;
+
+    form{
+        margin: 5px;
+    }
 }
