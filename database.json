@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "nombre": "Avatar",
+        "año": "2009",
+        "actores": "Jose Angel"
+    },
+    {
+        "id": 1,
+        "nombre": "Torrente",
+        "año": "2003",
+        "actores": "Santiago Segura"
+    },
+    {
+        "id": 2,
+        "nombre": "Toy Story",
+        "año": "2007",
+        "actores": "Michael Jordan"
+    }
+]
