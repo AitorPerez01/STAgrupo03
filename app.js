@@ -11,6 +11,11 @@ const getMovies = () => {
     return JSON.parse(data);
 };
 
+// Función para escribir el archivo JSON de las películas
+const saveMovies = (movies) => {
+    fs.writeFileSync('./database.json', JSON.stringify(movies, null, 2), 'utf-8');
+};
+
 // Ruta para obtener todas las películas
 app.get('/database', (req, res) => {
     const movies = getMovies();
@@ -20,12 +25,78 @@ app.get('/database', (req, res) => {
 // Ruta para obtener una película por su ID
 app.get('/database/:id', (req, res) => {
     const movies = getMovies();
-    const movie = movies.find(m => m.id === parseInt(req.params.id));
+    const id = req.params.id;
+    if(!isNaN(id)){
+        const movie = movies.find(m => m.id === parseInt(id));
+        if (!movie) {
+            return res.status(404).json({ message: 'Película no encontrada' });
+        }
+
+        res.json(movie);
+    }
+    const movie = movies.find(m => m.nombre.toLowerCase() === req.params.id.toLowerCase());
     if (!movie) {
         return res.status(404).json({ message: 'Película no encontrada' });
     }
 
     res.json(movie);
+});
+
+// Ruta para agregar una nueva película con ID autogenerada
+app.post('/database', (req, res) => {
+    const movies = getMovies();
+    const { nombre, año, actores } = req.body;
+
+    // Validar que todos los campos están presentes
+    if (!nombre || !año || !actores) {
+        return res.status(400).json({ message: 'Faltan campos obligatorios' });
+    }
+
+    // Verificar si la película ya existe (comparando el nombre)
+    const existingMovie = movies.find(m => m.nombre.toLowerCase() === nombre.toLowerCase());
+    if (existingMovie) {
+        return res.status(400).json({ message: 'La película ya existe' });
+    }
+
+    // Generar un nuevo ID autoincremental basado en la longitud del array
+    const newId = movies.length > 0 ? movies[movies.length - 1].id + 1 : 1;
+
+    // Agregar la nueva película
+    const newMovie = {
+        id: newId,
+        nombre,
+        año,
+        actores
+    };
+    movies.push(newMovie);
+
+    // Guardar en el archivo JSON
+    saveMovies(movies);
+
+    // Responder con la nueva película agregada
+    res.status(201).json(newMovie);
+});
+
+// Ruta para eliminar una película por su nombre
+app.delete('/database/:nombre', (req, res) => {
+    let movies = getMovies();
+    const nombre = req.params.nombre.toLowerCase();
+
+    // Buscar la película por nombre
+    const movieIndex = movies.findIndex(m => m.nombre.toLowerCase() === nombre);
+
+    if (movieIndex === -1) {
+        return res.status(404).json({ message: 'Película no encontrada' });
+    }
+
+    // Eliminar la película de la lista
+    const deletedMovie = movies.splice(movieIndex, 1);
+
+    // Guardar la nueva lista de películas
+    saveMovies(movies);
+
+    // Responder con la película eliminada
+    res.status(200).json({ message: 'Película eliminada', pelicula: deletedMovie });
 });
 
 // Iniciar el servidor
