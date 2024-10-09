@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "nombre": "Javier Bardem",
+    "año": 1960
+  },
+  {
+    "id": 1,
+    "nombre": "Antonio Banderas",
+    "año": 1964
+  },
+  {
+    "id": 2,
+    "nombre": "Jose Coronado",
+    "año": 1967
+  },
+  {
+    "id": 3,
+    "nombre": "Penelope Cruz",
+    "año": 1980
+  },
+  {
+    "id": 4,
+    "nombre": "Blanca Suarez",
+    "año": 1985
+  },
+  {
+    "id": 5,
+    "nombre": "Elsa Pataky",
+    "año": 1975
+  },
+  {
+    "id": 6,
+    "nombre": "Jose Mota",
+    "año": 1966
+  },
+  {
+    "id": 7,
+    "nombre": "Andrea Duro",
+    "año": 1994
+  }
+]
