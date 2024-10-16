@@ -36,7 +36,7 @@ app.get('/movies', (req, res) => {
 
 // Ruta para obtener todas los actores
 app.get('/actors', (req, res) => {
-    const actors = getMovies();
+    const actors = getActors();
     res.json(actors);
 });
 
