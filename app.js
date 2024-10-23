@@ -1,9 +1,11 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
+const cors = require('cors');
 
 // Middleware para manejar JSON
 app.use(express.json());
+app.use(cors());
 
 // Función para leer el archivo JSON de las películas
 const getMovies = () => {

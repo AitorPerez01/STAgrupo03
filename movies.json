@@ -3,6 +3,7 @@
     "id": 0,
     "nombre": "Seven",
     "año": 2009,
+    "categoria":"Ciencia ficcion",
     "actores": [
       "Jose Angel",
       "Sam Worthington",
@@ -14,6 +15,7 @@
     "id": 1,
     "nombre": "Torrente",
     "año": 2003,
+    "categoria":"Ciencia ficcion",
     "actores": [
       "Santiago Segura"
     ]
@@ -22,8 +24,108 @@
     "id": 2,
     "nombre": "Toy Story",
     "año": 2007,
+    "categoria":"Ciencia ficcion",
     "actores": [
       "Michael Jordan"
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Seven",
+    "año": 2000,
+    "categoria":"Ciencia ficcion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Cadena Perpetua",
+    "año": 2010,
+    "categoria":"Ciencia ficcion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "American History X",
+    "año": 1999,
+    "categoria":"Ciencia ficcion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Origen",
+    "año": 2012,
+    "categoria":"Ciencia ficcion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Los Increibles",
+    "año": 2012,
+    "categoria":"Animacion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Cars",
+    "año": 2012,
+    "categoria":"Animacion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "El Rey Leon",
+    "año": 2012,
+    "categoria":"Animacion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Coco",
+    "año": 2012,
+    "categoria":"Animacion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "One Piece Red",
+    "año": 2012,
+    "categoria":"Animacion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Naruto",
+    "año": 2012,
+    "categoria":"Animacion",
+    "actores": [
+      "Santiago Segura"
+    ]
+  },
+  {
+    "id": 13,
+    "nombre": "Black Clover",
+    "año": 2012,
+    "categoria":"Animacion",
+    "actores": [
+      "Santiago Segura"
     ]
   }
 ]
