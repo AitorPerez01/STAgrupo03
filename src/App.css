@@ -1,0 +1,49 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  h3{
+    color: #ffffff;
+    text-align: left;
+  }
+}
+
+.titulo {
+  font-family: 'Bebas neue', sans-serif;
+  color: #E50914;
+  font-size: 200px;
+  margin: 0px;
+  padding: 0px;
+}
+.contenedor {
+  background-color: dimgrey;
+  border-style: groove;
+  border-radius: 10px;
+  border-width: 3px;
+  height: 170px;
+  width: 1000px;
+  display: flex;
+  overflow-x: auto;
+}
+.movie {
+  min-height: 130px;
+  min-width: 180px;
+  
+  background-color:brown;
+  border-style: groove;
+  border-width: 1px;
+  border-radius: 10px;
+  margin: 9px;
+  p {
+    margin: 0px;
+  }
+  h2{
+    margin: 1px;
+  }
+}
+.detalles{
+  margin-top: 5px;
+  height: 40px;
+  border-radius: 30px;
+}
